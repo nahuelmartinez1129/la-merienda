@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Merienda</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            🍪 La Merienda
+        </div>
+
+        <button class="btn-carrito" id="btnCarrito">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="contador">0</span>
+
+        </button>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Tortitas raspaditas, cookies y budines artesanales.
+            </h1>
+
+            <p>
+                Elaborados con ingredientes seleccionados y mucho cuidado.
+            </p>
+
+            <a href="#productos" class="btn-principal">
+                Ver Productos
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+    <div class="banner-track">
+
+        <span>
+            🔥 Producción limitada del día •
+            🚚 Envios Pinamar - Valeria - Ostende •
+            ⭐ Cookies artesanales recién horneadas •
+            🥐 Tortitas raspaditas para acompañar el mate •
+            🍰 Budines caseros •
+            📲 Pedí por WhatsApp •
+        </span>
+
+        <span>
+            🔥 Producción limitada del día •
+            🚚 Envios Pinamar - Valeria - Ostende •
+            ⭐ Cookies artesanales recién horneadas •
+            🥐 Tortitas raspaditas para acompañar el mate •
+            🍰 Budines caseros •
+            📲 Pedí por WhatsApp •
+        </span>
+
+    </div>
+
+</section>
+
+    <!-- INFO -->
+
+    <section class="info">
+
+        <div class="info-card">
+            🚚 Entregas en Valeria del Mar
+        </div>
+
+        <div class="info-card">
+            📍 También en Pinamar y Ostende
+        </div>
+
+        <div class="info-card">
+            ⭐ Productos artesanales
+        </div>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+
+    <section class="productos-section">
+
+        <h2>Nuestros Productos</h2>
+
+        <div class="productos" id="productos"></div>
+
+    </section>
+
+    <!-- TESTIMONIOS -->
+
+    <section class="testimonios">
+
+        <h2>Lo que dicen nuestros clientes</h2>
+
+        <div class="testimonios-grid">
+
+            <div class="testimonio">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    Muy ricas las cookies.
+                </p>
+            </div>
+
+            <div class="testimonio">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    Los budines son increíbles.
+                </p>
+            </div>
+
+            <div class="testimonio">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    Las tortitas mendocinas estan tremendas.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CARRITO -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="carrito" id="carrito">
+
+        <div class="carrito-header">
+
+            <h2>Mi Pedido</h2>
+
+            <button id="cerrarCarrito">
+                 ✕
+            </button>
+
+        </div>
+
+        <div id="itemsCarrito"></div>
+
+        <div class="cliente">
+
+    <div class="campo">
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre">
+
+        <small
+            id="errorNombre"
+            class="error-texto">
+        </small>
+    </div>
+
+    <div class="campo">
+        <input
+            type="tel"
+            id="telefono"
+            placeholder="Teléfono">
+
+        <small
+            id="errorTelefono"
+            class="error-texto">
+        </small>
+    </div>
+
+    <div class="campo">
+        <input
+            type="text"
+            id="direccion"
+            placeholder="Dirección">
+
+        <small
+            id="errorDireccion"
+            class="error-texto">
+        </small>
+    </div>
+
+</div>
+
+        <div class="total">
+
+            Total: $
+
+            <span id="total">
+                0
+            </span>
+
+        </div>
+
+        <button id="vaciar">
+            Vaciar Carrito
+        </button>
+
+        <button id="comprar">
+            Finalizar por WhatsApp
+        </button>
+
+    </aside>
+
+    <!-- TOAST -->
+
+    <div class="toast" id="toast">
+        Producto agregado al carrito
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>La Merienda</h3>
+
+        <p>
+            Tortitas raspaditas, cookies y budines artesanales.
+        </p>
+
+        <p>
+            Valeria del Mar • Pinamar • Ostende
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
