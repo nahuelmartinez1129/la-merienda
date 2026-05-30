@@ -62,6 +62,9 @@ document.getElementById("itemsCarrito");
 const totalElemento =
 document.getElementById("total");
 
+const subtotalElemento =
+document.getElementById("subtotal");
+
 const contadorElemento =
 document.getElementById("contador");
 
@@ -73,6 +76,7 @@ JSON.parse(
 localStorage.getItem("carrito")
 ) || [];
 
+const COSTO_ENVIO = 1500;
 // ==========================
 // MOSTRAR PRODUCTOS
 // ==========================
@@ -235,13 +239,13 @@ function renderizarCarrito(){
 
     itemsCarrito.innerHTML = "";
 
-    let total = 0;
+    let subtotal = 0;
 
     let cantidadTotal = 0;
 
     carrito.forEach(producto=>{
 
-        total +=
+        subtotal +=
         producto.precio *
         producto.cantidad;
 
@@ -299,7 +303,22 @@ function renderizarCarrito(){
         `;
     });
 
-    totalElemento.textContent = total;
+    const envio =
+carrito.length > 0
+? COSTO_ENVIO
+: 0;
+
+const total =
+subtotal + envio;
+
+subtotalElemento.textContent =
+`$${subtotal}`;
+
+document.getElementById("envio").textContent =
+`$${envio}`;
+
+totalElemento.textContent =
+`$${total}`;
 
     contadorElemento.textContent =
     cantidadTotal;
@@ -509,23 +528,30 @@ Cantidad: ${producto.cantidad}
 
     });
 
-    const total = carrito.reduce(
+    const subtotal = carrito.reduce(
 
-        (acum,producto)=>
+    (acum,producto)=>
 
-        acum +
+    acum +
 
-        (producto.precio *
-        producto.cantidad),
+    (producto.precio *
+    producto.cantidad),
 
-        0
+    0
 
-    );
+);
+
+const total =
+subtotal + COSTO_ENVIO;
 
     mensaje +=
 `-------------------
 
- Total: $${total}`;
+ Subtotal: $${subtotal}
+
+Envío: $${COSTO_ENVIO}
+
+TOTAL: $${total}`;
 
     const numero = "542291472192";
 
