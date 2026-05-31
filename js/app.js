@@ -553,7 +553,7 @@ Envío: $${COSTO_ENVIO}
 
 TOTAL: $${total}`;
 
-    const numero = "542291504531";
+    const numero = "34623129535";
 
     const url =
 `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
