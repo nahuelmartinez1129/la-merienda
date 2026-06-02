@@ -7,46 +7,67 @@ const productos = [
         id: 1,
         nombre: "Cookies Clásicas",
         descripcion: "Cookies artesanales con chips de chocolate.",
-        precio: 2500,
-        imagen: "img/cookies.jpg",
-        destacado: false
+        precio: 2000,
+        imagen: "img/cookies-clasicas.jpeg",
+        destacado: true
     },
 
     {
-        id: 2,
-        nombre: "Tortitas Raspaditas",
-        descripcion: "Tortitas recién horneadas ideales para el mate.",
-        precio: 1000,
-        imagen: "img/tortitas.jpg",
-        destacado: true
+    id: 2,
+    nombre: "Cookies Azúcar Negra",
+    descripcion: "Cookies artesanales con azúcar negra y chips de chocolate.",
+    precio: 2000,
+    imagen: "img/cookies-azucar.jpeg",
+    destacado: false
     },
 
     {
         id: 3,
-        nombre: "Budín Artesanal",
-        descripcion: "Budín húmedo y esponjoso.",
-        precio: 4500,
-        imagen: "img/budin.jpg",
-        destacado: false
+        nombre: "Tortitas Raspaditas",
+        descripcion: "Tortitas recién horneadas ideales para el mate.",
+        precio: 1000,
+        imagen: "img/tortita-raspadita.jpeg",
+        destacado: true
     },
 
     {
         id: 4,
+        nombre: "Budín de Naranja",
+        descripcion: "Budín húmedo y esponjoso.",
+        precio: 3500,
+        imagen: "img/budin-naranja.jpeg",
+        destacado: false
+    },
+
+    {
+    id: 5,
+    nombre: "Budín de Limón",
+    descripcion: "Budín casero de limón, húmedo y esponjoso.",
+    precio: 3500,
+    imagen: "img/budin-limon.jpeg",
+    destacado: true
+    },
+    {
+        id: 6,
         nombre: "Combo Mate",
         descripcion: "6 tortitas + 4 cookies",
-        precio: 8500,
-        imagen: "img/combo-mate.png",
+        precio: 12000,
+        imagen: "img/combo-mate.jpeg",
         destacado: true
     },
 
     {
-        id: 5,
+        id: 7,
         nombre: "Combo Familiar",
-        descripcion: "12 tortitas + 1 budín",
-        precio: 12000,
-        imagen: "img/combo-familiar.png",
+        descripcion: "6 tortitas + 1 budín",
+        precio: 10000,
+        imagen: "img/promo-familiar.jpeg",
         destacado: true
     }
+
+    
+
+
 ];
 
 // ==========================
